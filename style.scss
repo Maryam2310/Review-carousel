@@ -1,0 +1,138 @@
+@import "reset";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+
+$bodyColor:#01949A;
+$cardContainer:#004369;
+$bgColor:#DB1F48;
+$textColor:#ffffff;
+
+
+
+body{
+    font-family: 'Roboto', sans-serif;   
+    background-color: $bodyColor;
+
+}
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+
+}
+
+
+
+.card-container{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: $cardContainer;
+width: fit-content;
+height: auto;
+
+}
+
+.card{
+background-color: $cardContainer;
+width: 400px;
+height: 500px;
+display: flex;
+text-align: center;
+text-transform: capitalize;
+box-shadow:2px 2px 3px 4px rgba($color: #000000, $alpha: 0.1);
+animation: fade 1.2s ease-out;
+color: $textColor;
+img{
+    width: 250px;
+    border-radius: 50%;
+   }
+   .image,
+   h1,
+   h1
+   {
+       
+       padding:10px 0;
+   }
+   h1{
+       font-size: 2.5rem;
+   }
+   h2{
+       font-size: 2rem;
+   }
+   p{
+       font-size: 1.6rem;
+       padding:20px 5px;
+       line-height: 1.5;
+   }
+   .review{
+       background-color: $bgColor;
+       margin: .5rem;
+   }
+
+}
+
+.buttons{
+    margin:10px auto;
+    button{
+        cursor: pointer;
+        padding: 1rem;
+        font-size:2rem ;
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+        transition: .5s all ease-in-out;
+        color: $textColor;
+        &:hover{
+            color: $bgColor;
+            transform: scale(1.5);
+        }
+    }
+}
+
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+
+@media (max-width:480px){
+
+    .card{
+        width: 280px;
+        height: auto;
+
+        img{
+            width: 180px;
+        }
+        h2{
+            font-size: 1.5rem;
+        }
+        h1{
+            font-size: 2rem;
+        }p{
+            font-size: 1.5rem;
+        }
+    }
+    .buttons{
+        button{
+            font-size: 1rem;
+        }
+    }
+    
+
+
+
+}
